@@ -1,14 +1,13 @@
 import os
 import sys
-import re
 
 
 def comb(list):
-    '''
+    """
     get a list and combine the elements with '-', except for the final symbols. e.g., ['keki', 'ta', '.'] becomes 'keki-ta'
     :param list:
     :return: str. a dash delimited string
-    '''
+    """
     SYMBOLS = '{}()[].!?,:;+-*/&|<>=~‘’“”\'\"'
     result = ''
 

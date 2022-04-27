@@ -4,22 +4,23 @@ from utils import csv
 translator = Translator()
 SYMBOLS = '{}()[].!?,:;+-*/&|<>=~‘’“”\'\"'
 
+
 def trans(sentence):
-    '''
+    """
 
     :param sentence: Korean
     :return English translation:
     cf. Install googletrans-3.1.0a0 using pip3 install googletrans==3.1.0a0
-    '''
+    """
     return translator.translate(sentence, src='ko', dest='en').text
 
 
 def gloss_content(morph):
-    '''
+    """
     For content morphemes, retrieve the base form and translate
     :param morph: tuple. (wordform, tag) e.g., ('들어가', 'V')
     :return: str. e.g., 'enter' (English translation of '들어가다')
-    '''
+    """
     if 'V' in morph[1]:
         baseform = morph[0]+'다'
 
@@ -49,11 +50,11 @@ def gloss_content(morph):
 
 
 def gloss(morphs):
-    '''
+    """
 
     :param morphs: the list of a morphs to be glossed. something like [('아버지', 'NNG'), ('께서', 'JKS')]
     :return: str 'Father-HON.NOM'
-    '''
+    """
 
     # see https://docs.google.com/spreadsheets/d/1OGAjUvalBuX-oZvZ_-9tEfYD2gQe7hTGsgUpiiBSXI8 for tags
     tags, g = csv(path='tags.csv')

@@ -3,13 +3,13 @@ from utils import csv
 import re
 
 def romanize(w, method ='yale', bilabial_round=False):
-    '''
+    """
     romanize a Korean word
     :param w: str. word to be romanized
     :param method: str. romanization convention. default to yale. currently supports 'yale' and 'klattese'
     :param bilabial_round: bool. merge [u] to [ɯ] after [u] is illegal after a bilabial in Korean phonotactics.
     :return: str. string of transliterated Korean.
-    '''
+    """
 
     if method == 'yale':
         conventionfilename = 'yale.csv'
