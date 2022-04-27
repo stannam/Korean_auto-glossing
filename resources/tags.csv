@@ -1,0 +1,33 @@
+Kkma_tags,Gloss (Sohn (1994) with modifications),Description 1,Description 2
+JKS,NOM,주격 조사,Nominative case marker
+JKSH,NOM.HON,'께서',Nominative case marker (honorific)
+JKC,NOM,보격 조사,Nominative particle (Sohn 1994)
+JKG,GEN,관형격 조사,Genetive case marker
+JKO,ACC,목적격 조사,Accusative case marker
+JKM,ADVZ,부사격 조사,Adverbializer
+JKI,VOC,호격 조사,Vocative case marker
+JKQ,QT,인용격 조사,Quotative particle (Sohn 1994)
+JC,and,접속 조사,Coornication (Sohn 1994:128)
+JX,PART,보조사,other particles
+JXTP,TOP,'은/는',Topic marker
+EPH,HON,존칭 선어말 어미,Subject honorification (Choi 2001)
+EPT,PST,시제 선어말 어미,Past tense
+EPP,EPP,공손 선어말 어미,
+EFN,DECL,평서형 종결 어미,Declarative sentence ender
+EFQ,INTR,의문형 종결 어미,Interrogative sentence ender
+EFO,IMPR,명령형 종결 어미,Imperative sentence ender
+EFA,EFA,청유형 종결 어미,
+EFI,EFI,감탄형 종결 어미,
+EFR,EFR,존칭형 종결 어미,
+ECE,ECE,대등 연결 어미,
+ECS,ECS,보조적 연결 어미,
+ECD,ECD,의존적 연결 어미,
+ETN,NMLZ,명사형 전성 어미,Nominalizer (i.e., -기)
+ETD,ETD,관형형 전성 어미,
+XPN,AFFIX,체언 접두사,
+XPV,AFFIX,용언 접두사,
+XSN,NMLZ,명사파생 접미사,Nominalizer (i.e., -기)
+XSV,VBLZ,동사 파생 접미사,Verbializer (i.e., -하)
+XSA,AFFIX,형용사 파생 접미사,
+XR,ROOT,어근,
+PLRL,PL,'-들',pluralizer
