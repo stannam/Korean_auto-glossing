@@ -10,3 +10,18 @@ I was lazy and clumsy enough to need help glossing Korean sentences while I work
 
 It use Kkma (part of konlpy.tag subpackage) for morphological analysis, googletrans for translationand hangul_to_jamo (part of the kPNNpy subpackage) for transliteration (the Yale romanization of Korean).
 
+## Usage
+run main.py with a Korean sentence. For example,
+
+```bash
+python3 main.py 아버지께서 방에 들어가신다.
+```
+
+throws back
+
+```bash
+input:   아버지께서 방에 들어가신다.
+Yale:    Apeci-kkeyse           pang-ey         tuleka-si-nta.
+gloss:   father-NOM.HON         room-ADVZ       enter-HON-DECL
+translation:     'Father enters the room.'
+```
