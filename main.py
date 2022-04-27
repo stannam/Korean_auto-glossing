@@ -2,6 +2,7 @@ from konlpy.tag import Kkma
 from romanize import romanize
 from utils import comb
 import glossing
+import sys
 
 
 def main(sentence):
@@ -39,12 +40,11 @@ def morph_analysis(sentence):
     return words
 
 
-if __name__ == '__main__':
-    sentence = 'Chelswu는 노래를 잘 불러보았다.'
+if sys.argv:
+    sentence = ' '.join(sys.argv[1:])
+    print(f'input:\t {sentence}')
     original, transliteration, glosses, translation = main(sentence)
-
     ## throw out the results to CLI
-    command_line_output(input=sentence,
-                        Yale=transliteration,
+    command_line_output(Yale=transliteration,
                         gloss=glosses,
                         translation=translation)
