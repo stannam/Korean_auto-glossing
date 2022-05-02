@@ -6,6 +6,8 @@ import sys
 
 
 def main(sentence):
+    if len(sentence) == 0:
+        return sentence, '', '', ''
     romanized_by_words = []
     gloss_by_words = []
     whole_translated = glossing.trans(sentence)

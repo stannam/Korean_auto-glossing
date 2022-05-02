@@ -22,7 +22,6 @@ def comb(list):
     return result
 
 
-
 def csv(path, header=True):
     pattern, subs = [], []
 

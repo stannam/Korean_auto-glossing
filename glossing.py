@@ -12,6 +12,8 @@ def trans(sentence):
     :return English translation:
     cf. Install googletrans-3.1.0a0 using pip3 install googletrans==3.1.0a0
     """
+    if len(sentence) == 0:
+        return ''
     return translator.translate(sentence, src='ko', dest='en').text
 
 
