@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="../static/style.css" rel="stylesheet" type="text/css">
+<title>Automatic syntactic glossing for Korean sentences</title>
+</head>
+<body>
+    <p>Enter a Korean sentence to auto-gloss: </p>
+    <div class="container">
+        <form action="" class="form-inline" method="post">
+            <input type="text" class="form-control" placeholder="{{ sentence }}" name="sentence"
+                   value="{{ request.form.sentence }}">
+            <input class="btn btn-default" type="submit" value="Submit">
+        </form>
+        <pre class="tab">{{ yale }}<br>{{ gloss }}<br>{{ translation }}</pre>
+    </div>
+</body>
+</html>

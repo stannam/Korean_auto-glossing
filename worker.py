@@ -42,7 +42,7 @@ def morph_analysis(sentence):
     return words
 
 
-if sys.argv:
+if sys.argv and __name__ == '__main__':
     sentence = ' '.join(sys.argv[1:])
     print(f'input:\t {sentence}')
     original, transliteration, glosses, translation = main(sentence)

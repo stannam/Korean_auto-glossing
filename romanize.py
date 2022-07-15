@@ -31,3 +31,7 @@ def romanize(w, method ='yale', bilabial_round=False):
         j = re.sub(character, alphabet[i], j)
 
     return j
+
+if __name__ == '__main__':
+    w = input('input')
+    print(romanize(w))
