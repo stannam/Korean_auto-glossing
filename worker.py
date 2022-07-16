@@ -12,7 +12,6 @@ def main(sentence):
     gloss_by_words = []
     whole_translated = glossing.trans(sentence)
 
-    words = sentence.split(' ')
     morphs = morph_analysis(sentence)
     for word in morphs:
         romanized = [romanize(i[0]) for i in word]

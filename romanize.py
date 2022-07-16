@@ -13,6 +13,8 @@ def romanize(w, method ='yale', bilabial_round=False):
 
     if method == 'yale':
         conventionfilename = 'yale.csv'
+    elif method == 'ipa':
+        conventionfilename = 'ipa.csv'
     elif method == 'klattese':
         conventionfilename = 'klattese.csv'  # default = klattese. to be changed if other conventions are added
     else:
@@ -24,8 +26,9 @@ def romanize(w, method ='yale', bilabial_round=False):
 
     if bilabial_round is not True and 'ㅜ' in j:
         j = re.sub('ㅂㅜ', 'ㅂㅡ', j)
-        re.sub('ㅍㅜ', 'ㅍㅡ', j)
-        re.sub('ㅃㅜ', 'ㅃㅡ', j)
+        j = re.sub('ㅍㅜ', 'ㅍㅡ', j)
+        j = re.sub('ㅃㅜ', 'ㅃㅡ', j)
+        j = re.sub('ㅁㅜ', 'ㅁㅡ', j)
 
     for i, character in enumerate(jamo):
         j = re.sub(character, alphabet[i], j)
