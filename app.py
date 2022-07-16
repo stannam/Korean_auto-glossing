@@ -17,7 +17,7 @@ def main():
                  '집에 올 시간이 지났다.',   # They should have arrived home already.
                  '언어학은 재밌어.'     # Linguistics is fun.
                  ]
-    sentence = choice(sentences)
+    sentence = ''
 
     # and process the sentence.
     # this gives a default yale romanization, by-word glosses, and a whole-sentence translation
