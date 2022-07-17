@@ -11,8 +11,8 @@ def main(sentence):
     romanized_by_words = []
     gloss_by_words = []
     whole_translated = glossing.trans(sentence)
-
-    morphs = morph_analysis(sentence)
+    morphs = [[('테스트','TEST')]]
+    # morphs = morph_analysis(sentence)
     for word in morphs:
         romanized = [romanize(i[0]) for i in word]
         romanized_by_words.append(comb(romanized))
@@ -49,3 +49,6 @@ if sys.argv and __name__ == '__main__':
     command_line_output(Yale=transliteration,
                         gloss=glosses,
                         translation=translation)
+
+if __name__ == '__main__':
+    main("우왕")
