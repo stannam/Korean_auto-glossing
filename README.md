@@ -15,7 +15,7 @@ It uses Kkma (part of [konlpy.tag subpackage](https://konlpy.org/en/latest/api/k
 run main.py with a Korean sentence. For example,
 
 ```bash
-python3 main.py 아버지께서 방에 들어가신다.
+python3 worker.py 아버지께서 방에 들어가신다.
 ```
 
 ... and the terminal returns.
