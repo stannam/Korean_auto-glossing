@@ -12,7 +12,7 @@ While I worked on a syntax qualifying paper, the most meaningless and tedious ta
 It uses Kkma (part of [konlpy.tag subpackage](https://konlpy.org/en/latest/api/konlpy.tag/#module-konlpy.tag._kkma)) for morphological analysis, [googletrans](https://github.com/ssut/py-googletrans) for translation, and hangul_to_jamo (part of the [kPNNpy subpackage](https://github.com/stannam/KPNN)) for the Yale romanization of Korean.
 
 ## Usage
-run main.py with a Korean sentence. For example,
+run worker.py with a Korean sentence. For example,
 
 ```bash
 python3 worker.py 아버지께서 방에 들어가신다.
