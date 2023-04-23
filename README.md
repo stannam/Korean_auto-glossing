@@ -7,7 +7,7 @@ It provides:
    * not-bad morphological analysis
    * google translation for the sentence
  
-While I worked on a syntax qualifying paper, glossing all Korean examples was a tedious task. Interlinear glosses should be consistent, and being consistent is what computers excel at (especially when the task is boring). So why not make it do the job for you?
+While I worked on a syntax qualifying paper, the most meaningless and tedious task was glossing all Korean examples. Interlinear glossing should be consistent, and being consistent is what computers excel at (especially when the task is boring). So let's make the computer do it for you.
 
 It uses Kkma (part of [konlpy.tag subpackage](https://konlpy.org/en/latest/api/konlpy.tag/#module-konlpy.tag._kkma)) for morphological analysis, [googletrans](https://github.com/ssut/py-googletrans) for translation, and hangul_to_jamo (part of the [kPNNpy subpackage](https://github.com/stannam/KPNN)) for the Yale romanization of Korean.
 
