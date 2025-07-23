@@ -1,21 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<link href="../static/style.css" rel="stylesheet" type="text/css">
-<title>Automatic syntactic glossing for Korean sentences</title>
+    <meta charset="UTF-8">
+    <link href="../static/style.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Automatic syntactic glossing for Korean sentences</title>
 </head>
 <body>
-    <p><b>Enter a Korean sentence to auto-gloss:<br/></b></p>
+    <h1 class="main-heading">Enter a Korean sentence to auto-gloss:</h1>
     <div class="container">
-        <form action="" class="form-inline" method="post">
+        <form id="glossForm" action="" class="form-inline" method="post">
             <input type="text" class="form-control" placeholder="{{ sentence }}" name="sentence"
-                   value="{{ request.form.sentence }}">
-            <input class="btn btn-default" type="submit" value="Submit">
+                   value="{{ request.form.sentence }}" required>
+            <input id="submitBtn" class="btn btn-default" type="submit" value="Submit">
+            <span id="loading" style="display:none; margin-left:10px;">⏳ Generating gloss...</span>
         </form>
         <pre class="tab">{{ yale }}<br>{{ gloss }}<br>{{ translation }}</pre>
     </div>
     <br>
     <p><a href="https://github.com/stannam/Korean_auto-glossing#readme" target="_blank">How to use</a></p>
+
+    <script defer>
+        const form = document.getElementById('glossForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const loadingIndicator = document.getElementById('loading');
+
+        form.addEventListener('submit', function(e){
+            submitBtn.disabled = true;
+            loadingIndicator.style.display = 'inline-block';
+        });
+        window.addEventListener('load', function () {
+        const loader = document.getElementById('page-loader');
+        if (loader) {
+            loader.style.display = 'none';
+        }
+    });
+    </script>
 </body>
 </html>
+

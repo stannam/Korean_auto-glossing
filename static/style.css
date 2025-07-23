@@ -1,11 +1,54 @@
-body
-{
+body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 1rem;
+    font-size: 1rem;
 }
-#element1
-{
-    display: inline-block;
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
 }
-.tab {
-        tab-size: 2;
-    }
+
+.main-heading {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+form.form-inline {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+input.form-control {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+input.btn {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+}
+
+#loading {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    color: #555;
+}
+
+pre.tab {
+    white-space: pre;
+    overflow-x: auto;
+    font-size: 1rem;
+    padding: 1rem;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+

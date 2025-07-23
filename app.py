@@ -1,8 +1,21 @@
-import os
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request
 from random import choice
 import worker
 
+# this is to always align the transliteration and gloss
+def align_results(results:list):
+    output_yale = ''
+    output_gloss = ''
+    for yale, gloss in zip(results[1], results[2]):
+        len_yale, len_gloss = len(yale), len(gloss)
+        len_diff = len_yale - len_gloss
+        output_yale += f"{yale}    "
+        output_gloss += f"{gloss}    "
+        if len_diff > 0:
+            output_gloss += " " * len_diff
+        else:
+            output_yale += " " * -len_diff
+    return output_yale, output_gloss
 app = Flask(__name__)
 
 
@@ -23,8 +36,7 @@ def main():
     # this gives a default yale romanization, by-word glosses, and a whole-sentence translation
     results = worker.main(sentence)
     sentence = sentence
-    yale = '\t\t'.join(results[1])
-    gloss = '\t\t'.join(results[2])
+    yale, gloss = align_results(results)
     translation = results[3]
 
     try:
@@ -32,8 +44,7 @@ def main():
             sentence = request.form['sentence']
             results = worker.main(sentence)
             sentence = sentence
-            yale = '\t\t'.join(results[1])
-            gloss = '\t\t'.join(results[2])
+            yale, gloss = align_results(results)
             translation = results[3]
         return render_template('main.html',
                                sentence=sentence,
@@ -46,4 +57,6 @@ def main():
                                yale='',
                                gloss='',
                                translation='')
-
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0', port=5000)
+    
